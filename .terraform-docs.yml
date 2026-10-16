@@ -1,0 +1,32 @@
+# Generates the Requirements, Providers, Resources, Inputs and Outputs tables
+# between the BEGIN_TF_DOCS / END_TF_DOCS markers in README.md.
+# Run: terraform-docs .   CI fails when the tables are stale.
+formatter: markdown table
+
+output:
+  file: README.md
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
+
+sections:
+  show:
+    - requirements
+    - providers
+    - resources
+    - inputs
+    - outputs
+
+settings:
+  anchor: false
+  default: true
+  description: true
+  required: true
+  type: true
+  lockfile: false
+
+sort:
+  enabled: true
+  by: required

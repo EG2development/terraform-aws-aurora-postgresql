@@ -1,0 +1,23 @@
+# All CI logic lives in terraform-module-standards. This file only says which
+# Terraform minimum to test and which Checkov checks (if any) this module skips.
+# The ruleset requires the status check "ci / CI passed": keep this job named ci.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1" # weekly, against the latest Terraform and provider
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  ci:
+    uses: EG2development/terraform-module-standards/.github/workflows/terraform-ci.yml@main
+    with:
+      terraform-min-version: "1.9.8" # newest patch of the oldest minor in versions.tf
+      aws-provider-min-version: "6.0.0" # the hashicorp/aws minimum in versions.tf
+      checkov-skip-checks: "" # comma-separated IDs, each justified in README "Security scanning"

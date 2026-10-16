@@ -1,0 +1,16 @@
+# release-please keeps one release pull request up to date; merging it creates
+# the tag vX.Y.Z and the GitHub Release. The logic lives in
+# terraform-module-standards; the secrets are the release GitHub App's.
+name: release-please
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    uses: EG2development/terraform-module-standards/.github/workflows/terraform-release.yml@main
+    secrets: inherit

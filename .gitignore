@@ -1,0 +1,24 @@
+# Terraform working files and anything that can hold state or secrets.
+# The dependency lock file is deliberately not committed in a module repository:
+# the module declares version ranges and CI tests both ends of them.
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfplan.json
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.env
+.env.*
+!.env.example
+
+# Operating-system clutter
+.DS_Store
