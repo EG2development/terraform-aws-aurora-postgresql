@@ -1,3 +1,4 @@
-# Every change needs a review from the owning team. The team must have write
-# access to this repository, or GitHub ignores this file.
-* @EG2development/admins
+# No code owners are configured yet. When the owning team exists and has write
+# access to this repository, add it here (teams, not people), for example:
+#   * @ORG/TEAM
+# GitHub ignores a rule whose team cannot be resolved.
