@@ -6,6 +6,9 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
+    # Version updates go through dev like every other change. Dependabot
+    # security updates always target the default branch (main).
+    target-branch: dev
     schedule:
       interval: weekly
       day: monday

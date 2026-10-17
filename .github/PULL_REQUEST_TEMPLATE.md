@@ -1,5 +1,6 @@
 <!--
-Title = the commit on main (squash merge) = what release-please reads:
+Base branch: dev. Only the promotion pull request (scripts/promote.sh) targets main.
+Title = the squash commit on dev, copied into the promotion = what release-please reads:
   feat: ...  fix: ...  docs: ...  chore: ...  refactor: ...  test: ...  ci: ...
   feat!: ... for a breaking change, with a "BREAKING CHANGE: ..." paragraph at the end.
 First release of a new module: make  Release-As: 1.0.0  the last line of this text.

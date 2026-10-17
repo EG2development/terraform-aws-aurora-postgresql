@@ -6,7 +6,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [dev, main]
   schedule:
     - cron: "0 6 * * 1" # weekly, against the latest Terraform and provider
 

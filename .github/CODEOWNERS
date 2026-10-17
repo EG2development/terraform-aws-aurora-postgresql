@@ -2,3 +2,9 @@
 # access to this repository, add it here (teams, not people), for example:
 #   * @ORG/TEAM
 # GitHub ignores a rule whose team cannot be resolved.
+#
+# Paths that decide who can merge, release or run CI. Give them to the platform
+# team as soon as it exists; the main ruleset requires a code-owner review.
+#   /.github/                       @ORG/TEAM
+#   /release-please-config.json     @ORG/TEAM
+#   /.release-please-manifest.json  @ORG/TEAM
