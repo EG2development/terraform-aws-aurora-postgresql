@@ -6,6 +6,8 @@ name: release-please
 on:
   push:
     branches: [main]
+  # Rerun a failed release, or the main -> dev sync, by hand.
+  workflow_dispatch:
 
 permissions:
   contents: read

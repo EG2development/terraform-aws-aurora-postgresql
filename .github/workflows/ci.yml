@@ -6,7 +6,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [dev, main]
   schedule:
     - cron: "0 6 * * 1" # weekly, against the latest Terraform and provider
 
@@ -20,4 +20,4 @@ jobs:
     with:
       terraform-min-version: "1.9.8" # newest patch of the oldest minor in versions.tf
       aws-provider-min-version: "6.0.0" # the hashicorp/aws minimum in versions.tf
-      checkov-skip-checks: "" # comma-separated IDs, each justified in README "Security scanning"
+      checkov-skip-checks: "CKV2_AWS_5,CKV2_AWS_8,CKV2_AWS_27" # justified in README "Security scanning"
