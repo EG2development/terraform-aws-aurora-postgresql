@@ -66,7 +66,7 @@ it), never to a branch. Run `terraform init` after changing `source`.
 
 | Name | Version |
 | ---- | ------- |
-| terraform | >= 1.9.0 |
+| terraform | >= 1.16.0 |
 | aws | >= 6.0 |
 
 ## Providers
