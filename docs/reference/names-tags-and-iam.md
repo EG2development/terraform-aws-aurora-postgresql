@@ -81,7 +81,7 @@ To apply the module, the caller's credentials need:
 
 | | Minimum | Why |
 | --- | --- | --- |
-| Terraform | 1.9.0 | Variable validations that refer to other variables |
+| Terraform | 1.16.0 | The floor shared by this family of modules |
 | `hashicorp/aws` | 6.0 | Every argument the module sets exists in 6.0; `terraform test` passes with the provider pinned to 6.0.0 |
 
 Inputs and outputs are listed in the [README](../../README.md#inputs).

@@ -8,7 +8,7 @@ cluster never scales below 0.5 units.
 
 ## Before you start
 
-- Terraform 1.9 or later, and credentials for a sandbox AWS account that may create
+- Terraform 1.16 or later, and credentials for a sandbox AWS account that may create
   RDS clusters, DB subnet groups, security groups and IAM roles, and read Secrets
   Manager secrets.
 - A VPC with two private subnets in different Availability Zones. The
@@ -36,7 +36,7 @@ your VPC, your two private subnets and your host's security group:
 
 ```hcl
 terraform {
-  required_version = ">= 1.9.0"
+  required_version = ">= 1.16.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
