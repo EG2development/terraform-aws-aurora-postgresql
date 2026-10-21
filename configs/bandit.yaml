@@ -1,0 +1,20 @@
+# Do not check paths including `/tests/`:
+# they use `assert`, leading to B101 false positives.
+# Follow this link to see all tests https://bandit.readthedocs.io/en/latest/plugins/index.html#complete-test-plugin-listing
+---
+exclude_dirs: ["/tests/"]
+skips:
+  [
+    "B101",
+    "B106",
+    "B107",
+    "B110",
+    "B112",
+    "B310",
+    "B404",
+    "B603",
+    "B605",
+    "B606",
+    "B607",
+    "B608",
+  ]

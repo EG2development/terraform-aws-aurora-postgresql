@@ -1,13 +1,7 @@
-# Keeps the pinned GitHub Actions current. The "ci" prefix makes each PR title
-# a Conventional Commit, so it passes the PR title check and releases nothing.
-# Terraform and provider minimums are raised deliberately, not by a bot: see
-# terraform-module-standards/docs/standard.md, section 14.
 version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    # Version updates go through dev like every other change. Dependabot
-    # security updates always target the default branch (main).
     target-branch: dev
     schedule:
       interval: weekly
@@ -15,8 +9,5 @@ updates:
     groups:
       actions:
         patterns: ["*"]
-    # A release is a week old before it is proposed.
     cooldown:
       default-days: 7
-    commit-message:
-      prefix: "ci"

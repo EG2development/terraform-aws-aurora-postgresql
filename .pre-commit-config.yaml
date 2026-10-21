@@ -1,6 +1,4 @@
-# The same checks CI runs, on every commit. Install once per clone:
-#   pre-commit install
-# Needs terraform, tflint and terraform-docs on PATH.
+# Install with pre-commit install; requires terraform, tflint and terraform-docs.
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0

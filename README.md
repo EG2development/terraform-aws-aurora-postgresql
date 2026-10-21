@@ -65,20 +65,20 @@ it), never to a branch. Run `terraform init` after changing `source`.
 ## Requirements
 
 | Name | Version |
-| ---- | ------- |
+|------|---------|
 | terraform | >= 1.9.0 |
 | aws | >= 6.0 |
 
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
+|------|---------|
 | aws | >= 6.0 |
 
 ## Resources
 
 | Name | Type |
-| ---- | ---- |
+|------|------|
 | [aws_db_subnet_group.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group) | resource |
 | [aws_iam_role.rds_monitoring](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy_attachment.rds_monitoring](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
@@ -90,7 +90,7 @@ it), never to a branch. Run `terraform init` after changing `source`.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-| ---- | ----------- | ---- | ------- | :------: |
+|------|-------------|------|---------|:--------:|
 | engine\_version | Aurora PostgreSQL engine version, for example "18.4". Required: a major version is a decision, never a silent default. List the versions a Region offers with `aws rds describe-db-engine-versions --engine aurora-postgresql`. A higher major version needs allow\_major\_version\_upgrade. | `string` | n/a | yes |
 | name | Cluster identifier and prefix for every name and Name tag the module creates, for example "payments-prod". docs/reference/names-tags-and-iam.md lists every derived name. Changing it replaces the cluster: a new, empty database. | `string` | n/a | yes |
 | subnet\_ids | IDs of the private subnets for the DB subnet group, in at least two Availability Zones. RDS places each instance in one of them. | `list(string)` | n/a | yes |
@@ -125,7 +125,7 @@ it), never to a branch. Run `terraform init` after changing `source`.
 ## Outputs
 
 | Name | Description |
-| ---- | ----------- |
+|------|-------------|
 | cluster\_arn | ARN of the cluster. |
 | cluster\_endpoint | Writer endpoint. Follows the writer through failovers; use it for anything that writes. |
 | cluster\_identifier | Identifier of the cluster (the DBClusterIdentifier dimension of its CloudWatch metrics). |
@@ -157,8 +157,9 @@ it), never to a branch. Run `terraform init` after changing `source`.
 
 ## Security scanning
 
-Checkov runs on every pull request. Three checks are skipped, in
-[`.github/workflows/ci.yml`](.github/workflows/ci.yml):
+Checkov runs on every pull request via
+[Static Analysis](.github/workflows/workflow.yml). Three AWS checks are skipped in
+[`configs/checkov.yml`](configs/checkov.yml):
 
 | Check | Why it is skipped |
 | --- | --- |
@@ -187,7 +188,8 @@ Semantic versions, tags `vMAJOR.MINOR.PATCH`, created by release-please from
 Conventional Commit pull-request titles. Patch: a fix that changes no plan. Minor: a
 new optional input, output or off-by-default resource. Major: anything that can
 change or replace an existing caller's resources, or raise a minimum version.
-Details: [the standard](https://github.com/EG2development/terraform-module-standards/blob/main/docs/standard.md).
+For the contribution and release checks, see [`CONTRIBUTING.md`](CONTRIBUTING.md)
+and [the release workflow](.github/workflows/release-please.yml).
 
 ## Contributing and ownership
 

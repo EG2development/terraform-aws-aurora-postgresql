@@ -1,0 +1,17 @@
+---
+# Default state for all rules
+default: true
+# MD013/line-length - Line length
+MD013: false
+# MD033/no-inline-html - Inline HTML
+MD033: false
+# MD046: Code block style
+MD046: false
+# MD025: Multiple top level headers in doc
+MD025: false
+# MD024 Multiple headers with the same content
+MD024: false
+# MD026 trailing punctuation in heading - negates use of emojis
+MD026: false
+# MD041 First line in a file should be a top-level heading
+MD041: false

@@ -1,0 +1,29 @@
+---
+compact: true
+directory:
+  - .
+download-external-modules: false
+evaluate-variables: true
+framework: terraform
+output: cli
+quiet: true
+soft-fail: false
+skip-check:
+  - CKV_GCP_16 # Why don't we do this? https://jira.ons.gov.uk/browse/CATDE-1831
+  - CKV_GCP_41 # Impersonation is ok
+  - CKV_GCP_49 # Impersonation is ok
+  - CKV_GCP_62 # We are happy with current logs
+  - CKV_GCP_81 # We don't currently do CSEK
+  - CKV_GCP_117 # Basic roles are ok here
+  - CKV_TF_1 # Private modules don't need commit hash
+  - CKV_TF_2 # we use the same version pattern that checkov expects at present.
+  - CKV_GCP_124 # Skipping due to specific project constraints
+  - CKV_GCP_114 # Skipping public access prevention checks
+  - CKV_GCP_78 # Skipping cloud storage versioning checks
+  - CKV_GCP_33 # Skipping oslogin enforcement
+  - CKV_GCP_83 # Skipping PubSub CSEK requirement
+  - CKV2_GCP_10 # Skipping Cloud Function HTTP trigger security check
+  - CKV2_AWS_5 # Attached SG: example app SG has no app resource; module SG attaches to cluster
+  - CKV2_AWS_8 # AWS Backup plan: account-managed; module configures RDS automated backups
+  - CKV2_AWS_27 # Query logging: workload-specific parameter group; SQL literals may expose data
+summary-position: bottom
