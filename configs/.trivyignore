@@ -1,0 +1,7 @@
+AVD-GCP-0011 # Impersonation is ok for us.
+AVD-GCP-0013 # Why don't we do this? https://jira.ons.gov.uk/browse/CATDE-1831
+AVD-GCP-0007 # Service Accounts can have IAM roles.
+AVD-GCP-0066 # We don't use CSEKs.
+AVD-GCP-0075 # Private Google Access not required for these subnets.
+AVD-GCP-0077 # Bucket logging not configured by design.
+AVD-GCP-0078 # Bucket versioning not enabled by design.

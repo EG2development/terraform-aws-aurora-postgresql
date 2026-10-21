@@ -1,0 +1,6 @@
+disable=
+    W0718,  # Catching too general exception Exception
+    W0613,  # Unused argument
+    W0612,  # Unused variable
+    W0707,  # Consider explicitly re-raising using the 'from' keyword
+    R0801   # Similar lines in multiple files

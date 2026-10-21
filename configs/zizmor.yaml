@@ -1,0 +1,23 @@
+---
+# zizmor configuration for ons-css-terraform
+# https://docs.zizmor.sh/configuration/
+#
+# zizmor statically analyses the GitHub Actions workflows in .github/workflows/
+# for security issues (template injection, credential persistence, unpinned
+# uses, etc.). It is run in CI via the reusable workflow
+# onsdigital/ons-github-actions/.github/workflows/zizmor.yml, which invokes
+# zizmor with `--config ./configs/zizmor.yaml`.
+#
+# All audits run with their default settings. Nothing is disabled or ignored:
+# the repo's workflows SHA-pin every `uses:` and set least-privilege
+# `permissions`, so no suppressions are currently needed.
+#
+# To silence a specific finding, add it under the relevant audit id, e.g.:
+#
+#   rules:
+#     template-injection:
+#       ignore:
+#         - some-workflow.yml:42:10   # filename[:line[:column]]
+#
+# Prefer fixing findings or ignoring individual lines over `disable: true`.
+rules: {}

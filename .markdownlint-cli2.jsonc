@@ -1,4 +1,3 @@
-// markdownlint rules for this repository (CI "Docs" job and pre-commit).
 {
   "config": {
     "default": true,

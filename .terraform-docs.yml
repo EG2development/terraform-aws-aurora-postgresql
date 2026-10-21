@@ -1,6 +1,3 @@
-# Generates the Requirements, Providers, Resources, Inputs and Outputs tables
-# between the BEGIN_TF_DOCS / END_TF_DOCS markers in README.md.
-# Run: terraform-docs .   CI fails when the tables are stale.
 formatter: markdown table
 
 output:

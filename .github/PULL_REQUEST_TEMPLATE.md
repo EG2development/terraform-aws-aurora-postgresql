@@ -1,21 +1,50 @@
 <!--
-Base branch: dev. Only the promotion pull request (scripts/promote.sh) targets main.
-Title = the squash commit on dev, copied into the promotion = what release-please reads:
-  feat: ...  fix: ...  docs: ...  chore: ...  refactor: ...  test: ...  ci: ...
-  feat!: ... for a breaking change, with a "BREAKING CHANGE: ..." paragraph at the end.
-First release of a new module: make  Release-As: 1.0.0  the last line of this text.
-Write in prose: a line that looks like "fix: ..." becomes a changelog entry.
+For Work In Progress Pull Requests, please use the Draft PR feature.
+To tick checkboxes put an `x` in the `[ ]`
 -->
 
-## What changed
+# What type of PR is this? (tick all applicable)
 
-## Plan impact for existing callers
+- [ ] Refactor
+- [ ] Feature
+- [ ] Release (have you completed the release pro forma?)
+- [ ] Bug Fix
+- [ ] Optimization
+- [ ] Documentation Update
 
-<!-- none | in-place update of ... | replacement of ... (then the title needs "!") -->
+## Description
 
-## How it was checked
+*Please replace this line with a description of your changes.*
 
-- [ ] `terraform test`
-- [ ] `tflint --recursive`
-- [ ] `terraform-docs .` (README tables regenerated)
-- [ ] `docs/` pages still true (reference: names, IAM, permissions; how-to steps)
+## Related Tickets & Documents
+
+<!--
+Include a Microsoft Planner Ticket or GitHub issue number
+-->
+
+- Microsoft Planner ticket #
+- Related documentation (e.g. Confluence) #
+
+## How to test this pull request (PR)
+
+*Please replace this line with instructions on how to test your changes. Testing should be conducted
+by the PR raiser. Where possible the approver should verify the changes.*
+
+## Run pre-commit hooks?
+
+- [ ] Yes
+- [ ] No, and this is why: *please replace this text with why you haven't*
+
+## Added/updated tests?
+
+*We encourage you to keep the code coverage percentage at 80% and above (for supported languages).*
+
+- [ ] Yes
+- [ ] No, and this is why: *please replace this text with details on why tests
+      have not been included*
+
+## [optional] Are there any post deployment tasks we need to perform?
+
+## Notes
+
+- The PR raiser is expected to perform the Git merge.

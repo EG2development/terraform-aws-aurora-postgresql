@@ -1,0 +1,19 @@
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+# E/W = pycodestyle, F = pyflakes, I = isort, UP = pyupgrade
+select = ["E", "F", "W", "I", "UP"]
+
+ignore = [
+    "E203",  # Whitespace before ':' (conflicts with black)
+    "E402",  # Module level import not at top of file
+    "E501",  # Line too long (handled by black / line-length above)
+    "E722",  # Do not use bare 'except'
+    "F401",  # Imported but unused
+    "F403",  # 'from module import *' used
+    "F405",  # May be undefined or from star imports
+    "F841",  # Local variable assigned to but never used
+    "W291",  # Trailing whitespace (handled by pre-commit-hooks)
+    # W503/W504 are flake8-only codes; ruff does not have these rules
+]
